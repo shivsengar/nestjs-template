@@ -1,6 +1,6 @@
 import { join } from 'path';
 import * as winston from 'winston';
-import DailyRotateFile from 'winston-daily-rotate-file';
+import  'winston-daily-rotate-file';
 import { LogLevel } from './loglevel.util';
 export class LoggerService {
     private logger: winston.Logger;
@@ -10,7 +10,7 @@ export class LoggerService {
             winston.format.timestamp(),
             winston.format.printf((info) => `${info.timestamp} [${info.level}] [${info.context}] : ${info.message}`),
         );
-        const transport = new DailyRotateFile({
+        const transport = new winston.transports.DailyRotateFile({
             filename: '#{logs}#/dms/dms-%Date%.log',
             datePattern: 'YYYY-MM-DD-HH-MM'
         });

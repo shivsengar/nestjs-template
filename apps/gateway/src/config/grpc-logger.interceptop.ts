@@ -10,11 +10,11 @@ export class GrpcLoggingInterceptor implements NestInterceptor {
         const call: any = context.switchToRpc().getContext();
         
         // Ensure call is an instance of ClientReadableStream before using getMetadata
-        console.log(`[gRPC] Request to ${call?.req.route.path}:`, call.req.body);
+        this.logger.log(`[gRPC] Request to ${call?.req.route.path}:`, call.req.body);
 
         return next.handle().pipe(
             tap((data) => {
-                console.log(`[gRPC] Response from ${call?.req.route.path}:`, data);
+                this.logger.log(`[gRPC] Response from ${call?.req.route.path}:`, data);
             })
         );
     }
