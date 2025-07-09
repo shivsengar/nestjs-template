@@ -5,7 +5,7 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.port }}
+    - port: {{ .Values.appPort }}
+      targetPort: {{ .Values.appPort }}
   selector:
     app.kubernetes.io/name: {{ include "nestjs-service.name" . }}
