@@ -1,12 +1,13 @@
 appName: "nestjs-service"
 image:
-  repository: "your-dockerhub/{{ .Values.appName }}"
+  repository: "shivkumar1911/{{ .Values.appName }}"
   tag: "latest"
   pullPolicy: "IfNotPresent"
 
 service:
   type: ClusterIP
-  port: 3000
+  port: 15332
+  targetPort: 15332
 
 replicaCount: 1
 

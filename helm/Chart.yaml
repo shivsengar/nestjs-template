@@ -7,9 +7,9 @@ keywords:
   - nestjs
   - kubernetes
   - helm
-home: https://github.com/yourusername/nestjs-template 
+home: https://github.com/shivsengar/nestjs-template 
 sources:
-  - https://github.com/yourusername/nestjs-template 
+  - https://github.com/shivsengar/nestjs-template 
 maintainers:
-  - name: trueno turbo
-    email: trueno.turbo.akina86@gmail.com
+  - name: shivsengar
+    email: shivkumar18.abb@gmail.com
