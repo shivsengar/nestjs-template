@@ -1,0 +1,15 @@
+apiVersion: v2
+name: nestjs-service
+version: 0.1.0
+description: A reusable Helm chart for NestJS services
+type: application
+keywords:
+  - nestjs
+  - kubernetes
+  - helm
+home: https://github.com/yourusername/nestjs-template 
+sources:
+  - https://github.com/yourusername/nestjs-template 
+maintainers:
+  - name: trueno turbo
+    email: trueno.turbo.akina86@gmail.com
